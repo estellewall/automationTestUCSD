@@ -32,14 +32,14 @@ public class BasicTest extends JiraTestCase {
         FEATURE("Basic Jira Test sneak developer");
         SCENARIO("User logs in and validates basic navigation functionality");
 
-        GIVEN("I am a valid user");
+        GIVEN("I am logged in");
         webElementVisible(Constants.NEW_TEST_HEADING);
-
-        WHEN("I navigate with the left menu");
+        
+        WHEN("I navigate to the Filters tab");
         webAction(Constants.ISSUES_AND_FILTERS_DIV);
         redirect(Constants.HOME_URL);
 
-        THEN("The expected pages are displayed");
+        THEN("The expected Filters page is displayed");
         webAction(Constants.DASHBOARD_DIV);
 
         redirect(Constants.HOME_URL);
