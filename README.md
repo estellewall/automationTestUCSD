@@ -1,9 +1,11 @@
 # Introduction
 UCSD Extension Jira Automation Project
+This project is cloned from https://github.com/carolyntag/ucsd-ext-jira
+This version 2.0 contains an updated BasicTest1.java and new BasicTest2.java
+
 
 # Questions and issues
-
-Call 911
+email estellewall@gmail.com
 
 # Prerequisites
 
