@@ -27,24 +27,22 @@ public class BasicTest2 extends JiraTestCase {
         FEATURE("Additional testing on stable Jira site features ");
         SCENARIO("User logs in and validates switch icon links");
 
-        GIVEN("The user logs in");
+        GIVEN("the user logs in to the Jira dashboard");
         webElementVisible(Constants.NEW_TEST_HEADING);
         
-        WHEN("The user navigate to the switch icon");
+        WHEN("the user navigates to the switch icon");
         webAction(Constants.SWITCH_DIV);
 
-        WHEN( "The user selects the start link");
+        WHEN( "the user selects the start link");
         webAction(Constants.START_LINK_DIV);
 
-        WHEN( "From Atlassian homepage the user selects Jira button");
+        AND( "from Atlassian homepage the user selects Jira button");
         webAction(Constants.JIRA_BUTTON);
+        webAction(Constants.DASHBOARD_TAB);
 
+        THEN("the user returns to Jira page and finds Create button");
+        webElementVisible(Constants.CREATE_PROJECT_DIV);
 
-        THEN("The user returns to Jira page dashboard tab is visible");
-        webElementVisible(Constants.DASHBOARD_TAB);
-        redirect(Constants.HOME_URL);
-
-        //redirect(Constants.HOME_URL);
 
     }
 

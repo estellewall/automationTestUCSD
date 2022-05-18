@@ -44,9 +44,6 @@ public final class Constants {
     public static final String ISSUES_SEARCH_PREVIEW_DIV = "//div[@aria-label='Issues']";
     public static final String BOARDS_SEARCH_PREVIEW_DIV = "//div[@aria-label='Boards']";
     public static final String PROJECTS_SEARCH_PREVIEW_DIV = "//div[@aria-label='Projects']";
-////*[@id="jira"]/div[17]/div[2]/div/span/div/div/div[2]/span/a[1]/span/span
-    ////*[@id="ak-main-content"]/div/div/div[1]/div[1]/div[1]/h1
-    ////*[@id="jira"]/div[17]/div[2]/div/span/div/div/div[2]/span/a[1]/span/span
     public static final String ISSUES_AND_FILTERS_DIV = "//*[@id=\"ak-jira-navigation\"]/header/nav/div[2]/div[3]/button/span[1]";
     public static final String FILTERS_DIV = "//*[@id=\"jira\"]/div[17]/div[3]/div/span/div/div/div[2]/span/a[1]/span/span";
     public static final String DASHBOARD_DIV = "//*[@id=\"ak-main-content\"]/div/div/div[1]/div[1]/div[2]/div/a/span";
@@ -55,8 +52,9 @@ public final class Constants {
     public static final String START_LINK_DIV = "//*[@id=\"jira\"]/div[17]/div[3]/div/div/div/div/div/section[1]/div[1]/a/span[1]";
     public static final String JIRA_BUTTON = "Jira Software";
     public static final String DASHBOARD_TAB = "//*[@id=\"ak-jira-navigation\"]/header/nav/div[2]/div[4]";
+    public static final String CREATE_PROJECT_DIV = "//*[@id=\"ak-main-content\"]/div/div/div[1]/div[1]/div[2]/div/button/span";
 
-
+//
 
     private Constants() {
     }
