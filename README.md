@@ -5,7 +5,7 @@ This version 2.0 contains an updated BasicTest1.java and new BasicTest2.java
 
 
 # Questions and issues
-email estellewall@gmail.com
+
 
 # Prerequisites
 
