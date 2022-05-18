@@ -1,0 +1,51 @@
+package com.ucsd.jira.automation.tests.web.company.jira;
+
+import com.pwc.core.framework.annotations.Issue;
+import com.pwc.core.framework.listeners.Retry;
+import com.ucsd.jira.automation.data.Constants;
+import com.ucsd.jira.automation.frameworksupport.Groups;
+import com.ucsd.jira.automation.frameworksupport.JiraTestCase;
+import org.testng.annotations.Test;
+
+import static com.pwc.logging.service.LoggerService.*;
+
+
+public class BasicTest2 extends JiraTestCase {
+
+    @Override
+    public void beforeMethod() {
+    }
+
+    @Override
+    public void afterMethod() {
+    }
+
+    @Issue("STORY-1235")
+    @Test(retryAnalyzer = Retry.class, groups = {Groups.ACCEPTANCE_TEST})
+    public void testBasic() {
+
+        FEATURE("Additional testing on stable Jira site features ");
+        SCENARIO("User logs in and validates switch icon links");
+
+        GIVEN("The user logs in");
+        webElementVisible(Constants.NEW_TEST_HEADING);
+        
+        WHEN("The user navigate to the switch icon");
+        webAction(Constants.SWITCH_DIV);
+
+        WHEN( "The user selects the start link");
+        webAction(Constants.START_LINK_DIV);
+
+        WHEN( "From Atlassian homepage the user selects Jira button");
+        webAction(Constants.JIRA_BUTTON);
+
+
+        THEN("The user returns to Jira page dashboard tab is visible");
+        webElementVisible(Constants.DASHBOARD_TAB);
+        redirect(Constants.HOME_URL);
+
+        //redirect(Constants.HOME_URL);
+
+    }
+
+}

@@ -34,13 +34,18 @@ public class BasicTest extends JiraTestCase {
 
         GIVEN("I am logged in");
         webElementVisible(Constants.NEW_TEST_HEADING);
-        
+
         WHEN("I navigate to the Filters tab");
         webAction(Constants.ISSUES_AND_FILTERS_DIV);
-        redirect(Constants.HOME_URL);
+        //redirect(Constants.HOME_URL);
 
-        THEN("The expected Filters page is displayed");
-        webAction(Constants.DASHBOARD_DIV);
+        WHEN("I select view all filters");
+        webAction(Constants.FILTERS_DIV);
+        //redirect(Constants.HOME_URL);
+
+        THEN("The expected Filters page has Create Filter button");
+        //webAction(Constants.DASHBOARD_DIV);
+        webElementVisible(Constants.DASHBOARD_DIV);
 
         redirect(Constants.HOME_URL);
 
